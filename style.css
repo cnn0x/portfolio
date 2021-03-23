@@ -401,6 +401,10 @@ nav {
     font-size: 36px !important;
   }
 
+  .news-header {
+    font-size: 36px !important;
+  }
+
   .bio-main-cont {
     margin-bottom: 10px !important;
   }
@@ -620,6 +624,10 @@ nav {
     font-size: 36px !important;
   }
 
+  .about-header {
+    font-size: 36px !important;
+  }
+
   .bio-main-cont {
     justify-content: space-between !important;
     margin: 0 !important;
@@ -638,9 +646,21 @@ nav {
 }
 
 @media all and (max-width: 480px) {
+  .profile-name {
+    font-size: 18px;
+  }
+
+  .news-content {
+    width: 90% !important;
+  }
+
   .portfolio-content {
     width: 300px;
     height: 250px;
+  }
+
+  .nav-bar-mobile i {
+    font-size: 2rem !important;
   }
 
   .portfolio-content img {
