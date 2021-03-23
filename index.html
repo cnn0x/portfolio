@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/e9dae8f569.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div
+      style="
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: white;
+        transition: 0.1s;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        pointer-events: none;
+        mix-blend-mode: overlay;
+      "
+      class="cursor"
+      id="cursor"
+    ></div>
+    <nav>
+      <div class="nav-bar">
+        <a style="flex: 1; margin-left: 100px" href="#home"
+          ><i style="font-size: 48px" class="fab fa-atlassian"></i
+        ></a>
+        <a id="home-link" href="#home">Home</a
+        ><a id="about" href="#top1">About</a
+        ><a id="services" href="#top-se">Services</a
+        ><a id="portfolio" href="#top2">Portfolio</a
+        ><a id="news" href="#top-ne">News</a
+        ><a id="contact" style="margin-right: 100px" href="#top3">Contact</a>
+      </div>
+      <div class="nav-bar-mobile">
+        <a href="#home"
+          ><i
+            style="font-size: 42px; color: white; margin-left: 20px"
+            class="fab fa-atlassian"
+          ></i
+        ></a>
+        <a onclick="burgerBar();">
+          <i
+            style="font-size: 42px; color: white; margin-right: 20px"
+            class="fas fa-bars"
+          ></i
+        ></a>
+        <div
+          style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(25, 25, 25);
+          "
+          class="active-nb"
+        >
+          <a onclick="closeNb();" id="home-link" href="#home">Home</a
+          ><a onclick="closeNb();" id="about" href="#top1">About</a
+          ><a onclick="closeNb();" id="services" href="#top-se">Services</a
+          ><a onclick="closeNb();" id="portfolio" href="#top2">Portfolio</a
+          ><a onclick="closeNb();" id="news" href="#top-ne">News</a
+          ><a onclick="closeNb();" id="contact" href="#top3">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="home-page" id="home">
+      <div class="overlay"></div>
+      <!-- <div class="linear-box3"></div>
+      <div class="linear-box"></div>
+      s
+      <div class="linear-box2"></div> -->
+      <div class="profile-holder">
+        <div style="z-index: -1" class="profile-holder-anim"></div>
+        <img
+          class="img-pp"
+          style="
+            z-index: 2;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+          "
+          src="./profile-image.jpg"
+          alt=""
+        />
+      </div>
+      <div class="profile-name">
+        <h1>BECKETT <span style="color: #009e66">ELROD</span></h1>
+        <p style="font-weight: 500">
+          I'am a
+          <span style="background-color: #009e66; padding: 0 10px"
+            >Web Designer</span
+          >
+        </p>
+        <a style="color: white" href="#top1">
+          <i
+            style="margin-top: 30px; animation: arrow 2s infinite"
+            class="fas fa-angle-double-down"
+          ></i>
+        </a>
+      </div>
+    </div>
+
+    <div style="color: white; width: 100%" id="about-page" class="about-page">
+      <div style="opacity: 0; margin-bottom: 100px" id="top1">ad</div>
+      <div style="text-align: center; z-index: 5" class="about-header">
+        <div class="profile-holder-anim-p"></div>
+        <h1
+          style="
+            color: white;
+            border-bottom: 3px solid #009e66;
+            display: inline;
+            font-size: 48px;
+          "
+        >
+          About Me
+        </h1>
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          margin-top: 50px;
+          max-width: 90%;
+          max-height: 80%;
+        "
+        class="about-body"
+      >
+        <img
+          style="border-radius: 10px; z-index: 2; width: 30%; object-fit: cover"
+          src="./profile-image.jpg"
+          alt=""
+        />
+        <div style="margin-left: 40px; width: 60%" class="description">
+          <h1>
+            I'am Beckett Elrod,
+            <span style="background: #009e66; padding: 0 10px"
+              >a Web Designer</span
+            >
+          </h1>
+          <p
+            style="
+              margin-top: 20px;
+              margin-bottom: 20px;
+              color: rgb(187, 187, 187);
+              line-height: 30px;
+            "
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            molestiae natus nisi. Voluptatem temporibus distinctio ipsa rerum
+            accusantium similique. Officiis ipsum iste, perspiciatis corrupti
+            voluptatum soluta quod eaque consequatur debitis.
+          </p>
+          <hr />
+          <div style="margin-top: 20px" class="details">
+            <div
+              style="display: flex; justify-content: space-between"
+              class="bio-ultra-main-cont"
+            >
+              <div
+                style="display: flex; margin-bottom: 20px"
+                class="bio-main-cont"
+              >
+                <div style="margin-right: 10px" class="bio-cont">
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-calendar-alt"></i> Age</span
+                    >
+                  </h4>
+
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-map-marker-alt"></i> Location</span
+                    >
+                  </h4>
+
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-at"></i> e-mail</span
+                    >
+                  </h4>
+
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-phone"></i> Phone</span
+                    >
+                  </h4>
+                </div>
+
+                <div style="text-align: end" class="bio-cont2">
+                  <h4 style="margin-bottom: 10px">21</h4>
+
+                  <h4 style="margin-bottom: 10px">US, Chicago</h4>
+
+                  <h4 style="margin-bottom: 10px">myemail@gmail.com</h4>
+
+                  <h4 style="margin-bottom: 10px">+634 2344 24 43</h4>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  justify-content: flex-start;
+                  margin-bottom: 20px;
+                "
+                class="bio-main-cont"
+              >
+                <div style="margin-right: 10px" class="bio-cont">
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-university"></i> Study</span
+                    >
+                  </h4>
+
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-gamepad"></i> Interests</span
+                    >
+                  </h4>
+
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-graduation-cap"></i> Degree</span
+                    >
+                  </h4>
+
+                  <h4 style="margin-bottom: 10px">
+                    <span style="color: #009e66"
+                      ><i class="fas fa-briefcase"></i> Current Work</span
+                    >
+                  </h4>
+                </div>
+
+                <div style="text-align: end" class="bio-cont2">
+                  <h4 style="margin-bottom: 10px">Univercity of Chicago</h4>
+
+                  <h4 style="margin-bottom: 10px">Playstation, Reading</h4>
+
+                  <h4 style="margin-bottom: 10px">Master</h4>
+
+                  <h4 style="margin-bottom: 10px">Web Developer</h4>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="font-size: 24px; margin-right: 10px"
+              class="social-icons"
+            >
+              <i style="margin-right: 10px" class="fab fa-twitter"></i>
+              <i style="margin-right: 10px" class="fab fa-facebook-square"></i>
+              <i style="margin-right: 10px" class="fab fa-instagram"></i>
+              <i style="margin-right: 10px" class="fab fa-youtube"></i>
+              <i style="margin-right: 10px" class="fab fa-github"></i>
+              <i style="margin-right: 10px" class="fab fa-linkedin-in"></i>
+            </div>
+            <button
+              style="
+                margin-top: 20px;
+                padding: 10px 20px;
+                border: none;
+                background-color: #009e66;
+                color: white;
+                font-weight: 500;
+                border-radius: 5px;
+                cursor: pointer;
+              "
+            >
+              Download my CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center" class="services-page">
+      <div style="opacity: 0; margin-bottom: 100px" id="top-se">ad</div>
+      <div class="profile-holder-anim-p"></div>
+      <div class="services-header">
+        <h1
+          style="
+            color: white;
+            border-bottom: 3px solid #009e66;
+            display: inline;
+            font-size: 48px;
+          "
+        >
+          My Services
+        </h1>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 50px;
+        "
+        class="services"
+      >
+        <div style="display: flex" class="c1">
+          <div
+            style="
+              width: 300px;
+              height: 200px;
+              background-color: rgb(53, 53, 53);
+              padding: 30px;
+              text-align: start;
+              color: white;
+              margin: 10px;
+            "
+            class="content"
+          >
+            <h1 style="color: #009e66; font-size: 50px">
+              <i class="fab fa-html5"></i>
+            </h1>
+            <h1 style="font-size: 24px">Design Trends</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div
+            style="
+              width: 300px;
+              height: 200px;
+              background-color: rgb(53, 53, 53);
+              padding: 30px;
+              text-align: start;
+              color: white;
+              margin: 10px;
+            "
+            class="content"
+          >
+            <h1 style="color: #009e66; font-size: 50px">
+              <i class="fas fa-images"></i>
+            </h1>
+            <h1 style="font-size: 24px">PSD Design</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div
+            style="
+              width: 300px;
+              height: 200px;
+              background-color: rgb(53, 53, 53);
+              padding: 30px;
+              text-align: start;
+              color: white;
+              margin: 10px;
+            "
+            class="content"
+          >
+            <h1 style="color: #009e66; font-size: 50px">
+              <i class="fab fa-intercom"></i>
+            </h1>
+            <h1 style="font-size: 24px">Customer Support</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div style="display: flex" class="c2">
+          <div
+            style="
+              width: 300px;
+              height: 200px;
+              background-color: rgb(53, 53, 53);
+              padding: 30px;
+              text-align: start;
+              color: white;
+              margin: 10px;
+            "
+            class="content"
+          >
+            <h1 style="color: #009e66; font-size: 50px">
+              <i class="fab fa-wordpress-simple"></i>
+            </h1>
+            <h1 style="font-size: 24px">Web Development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div
+            style="
+              width: 300px;
+              height: 200px;
+              background-color: rgb(53, 53, 53);
+              padding: 30px;
+              text-align: start;
+              color: white;
+              margin: 10px;
+            "
+            class="content"
+          >
+            <h1 style="color: #009e66; font-size: 50px">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </h1>
+            <h1 style="font-size: 24px">Fully Responsive</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div
+            style="
+              width: 300px;
+              height: 200px;
+              background-color: rgb(53, 53, 53);
+              padding: 30px;
+              text-align: start;
+              color: white;
+              margin: 10px;
+            "
+            class="content"
+          >
+            <h1 style="color: #009e66; font-size: 50px">
+              <i class="fas fa-rocket"></i>
+            </h1>
+            <h1 style="font-size: 24px">Branding</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center" class="portfolio-page">
+      <div style="opacity: 0; margin-bottom: 100px" id="top2">ad</div>
+      <div class="profile-holder-anim-w"></div>
+      <h1
+        style="
+          color: rgb(25, 25, 25);
+          border-bottom: 3px solid #009e66;
+          display: inline;
+          font-size: 48px;
+        "
+        class="portfolio-header"
+      >
+        Creative Portfolio
+      </h1>
+      <h2
+        style="
+          font-weight: 400;
+          font-size: 18px;
+          margin-top: 10px;
+          color: rgb(138, 138, 138);
+        "
+      >
+        My Latest Creative Works In Design And Web .
+      </h2>
+
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 30px;
+        "
+        class="portfolios"
+      >
+        <div style="display: flex" class="a">
+          <div id="deneme" class="portfolio-content">
+            <img
+              style="width: 300px; height: 250px; object-fit: cover"
+              src="./1.jpg"
+              alt=""
+            />
+            <div
+              style="
+                background-color: white;
+                z-index: 3;
+                width: 100%;
+                margin-top: -10px;
+                padding: 10px 0;
+              "
+              class="img-description"
+            >
+              Graphic Design
+              <i style="color: #009e66" class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <img
+              style="width: 300px; height: 250px; object-fit: cover"
+              src="./7.jpg"
+              alt=""
+            />
+            <div
+              style="
+                background-color: white;
+                z-index: 3;
+                width: 100%;
+                margin-top: -10px;
+                padding: 10px 0;
+              "
+              class="img-description"
+            >
+              PSD Template Design
+              <i style="color: #009e66" class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <img
+              style="width: 300px; height: 250px; object-fit: cover"
+              src="./3.jpg"
+              alt=""
+            />
+            <div
+              style="
+                background-color: white;
+                z-index: 3;
+                width: 100%;
+                margin-top: -10px;
+                padding: 10px 0;
+              "
+              class="img-description"
+            >
+              Mobile App
+              <i style="color: #009e66" class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex" class="b">
+          <div class="portfolio-content">
+            <img
+              style="width: 300px; height: 250px; object-fit: cover"
+              src="./6.jpg"
+              alt=""
+            />
+            <div
+              style="
+                background-color: white;
+                z-index: 3;
+                width: 100%;
+                margin-top: -10px;
+                padding: 10px 0;
+              "
+              class="img-description"
+            >
+              Mobile App
+              <i style="color: #009e66" class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <img
+              style="width: 300px; height: 250px; object-fit: cover"
+              src="./4.jpg"
+              alt=""
+            />
+            <div
+              style="
+                background-color: white;
+                z-index: 3;
+                width: 100%;
+                margin-top: -10px;
+                padding: 10px 0;
+              "
+              class="img-description"
+            >
+              PSD Template Design
+              <i style="color: #009e66" class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <img
+              style="width: 300px; height: 250px; object-fit: cover"
+              src="./2.jpg"
+              alt=""
+            />
+            <div
+              style="
+                background-color: white;
+                z-index: 3;
+                width: 100%;
+                margin-top: -10px;
+                padding: 10px 0;
+              "
+              class="img-description"
+            >
+              Web Design
+              <i style="color: #009e66" class="fas fa-external-link-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center" class="news-page">
+      <div style="opacity: 0; margin-bottom: 100px" id="top-ne">ad</div>
+      <h1
+        style="
+          color: white;
+          border-bottom: 3px solid #009e66;
+          display: inline;
+          font-size: 48px;
+        "
+      >
+        Latest News
+      </h1>
+      <div
+        style="display: flex; justify-content: center; margin-top: 50px"
+        class="main-holder"
+      >
+        <div
+          style="
+            width: 20%;
+            color: white;
+            text-align: start;
+            margin: 20px;
+            background-color: #009e66;
+            padding-bottom: 20px;
+          "
+          class="news-content"
+        >
+          <img
+            style="
+              width: 100%;
+              height: 300px;
+              object-fit: cover;
+              margin-bottom: 20px;
+            "
+            src="./news1.jpg"
+            alt=""
+          />
+          <h3 style="padding: 0 10px">March 11, 2021 by Alex</h3>
+          <hr />
+          <h2 style="padding: 0 10px; margin-top: 10px">
+            The Best Way To Present Your Design
+          </h2>
+        </div>
+
+        <div
+          style="
+            width: 20%;
+            color: white;
+            text-align: start;
+            margin: 20px;
+            background-color: #009e66;
+            padding-bottom: 20px;
+          "
+          class="news-content"
+        >
+          <img
+            style="
+              width: 100%;
+              height: 300px;
+              object-fit: cover;
+              margin-bottom: 20px;
+            "
+            src="./news2.jpg"
+            alt=""
+          />
+          <h3 style="padding: 0 10px">Feb 07, 2021 by Melvin</h3>
+          <hr />
+          <h2 style="padding: 0 10px; margin-top: 10px">
+            The Basics of Logo Design in Life
+          </h2>
+        </div>
+
+        <div
+          style="
+            width: 20%;
+            color: white;
+            text-align: start;
+            margin: 20px;
+            background-color: #009e66;
+            padding-bottom: 20px;
+          "
+          class="news-content"
+        >
+          <img
+            style="
+              width: 100%;
+              height: 300px;
+              object-fit: cover;
+              margin-bottom: 20px;
+            "
+            src="./new3.jpg"
+            alt=""
+          />
+          <h3 style="padding: 0 10px">Jan 15, 2020 by John</h3>
+          <hr />
+          <h2 style="padding: 0 10px; margin-top: 10px">
+            How To Edit Animated Mock Up
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center" id="coontact-page" class="contact-page">
+      <div style="opacity: 0; margin-bottom: 20px" id="top3">ad</div>
+      <h1
+        style="
+          color: white;
+          border-bottom: 3px solid #009e66;
+          display: inline;
+          font-size: 36px;
+        "
+      >
+        Contact Me
+      </h1>
+      <h2
+        style="
+          font-weight: 400;
+          font-size: 18px;
+          margin-top: 10px;
+          color: rgb(206, 206, 206);
+        "
+      >
+        Feel Free To Contact Me Any Time
+      </h2>
+      <div
+        style="display: flex; justify-content: center; margin-top: 30px"
+        class="container-cont"
+      >
+        <form
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            background-color: rgb(116, 116, 116);
+            padding: 20px;
+            border-radius: 5px;
+          "
+          action=""
+        >
+          <input
+            placeholder="Name"
+            style="height: 50px; padding: 0 20px; margin-bottom: 10px"
+            type="text"
+          />
+          <input
+            placeholder="E-mail"
+            style="height: 50px; padding: 0 20px; margin-bottom: 10px"
+            type="text"
+          />
+          <input
+            placeholder="Subject"
+            style="height: 50px; padding: 0 20px; margin-bottom: 10px"
+            type="text"
+          />
+          <textarea
+            placeholder="Message"
+            style="
+              height: 150px;
+              padding: 20px 20px;
+              margin-bottom: 10px;
+              max-width: 95%;
+            "
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button
+            style="
+              height: 60px;
+              cursor: pointer;
+              background-color: #009e66;
+              border: none;
+              color: white;
+            "
+          >
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        <div
+          style="width: 30%; padding: 0 40px; color: white; text-align: start"
+          class="extra-contact"
+        >
+          <h1>Let's talk about everything!</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor
+            sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet,
+            consectetuer adipiscing elit
+          </p>
+          <div
+            style="font-size: 24px; margin-right: 10px; margin-top: 10px"
+            class="social-icons"
+          >
+            <i style="margin-right: 10px" class="fab fa-twitter"></i>
+            <i style="margin-right: 10px" class="fab fa-facebook-square"></i>
+            <i style="margin-right: 10px" class="fab fa-instagram"></i>
+            <i style="margin-right: 10px" class="fab fa-youtube"></i>
+            <i style="margin-right: 10px" class="fab fa-github"></i>
+            <i style="margin-right: 10px" class="fab fa-linkedin-in"></i>
+          </div>
+          <br />
+          <h3>Phone:</h3>
+          <i style="color: #009e66" class="fas fa-phone"></i>
+          <h3 style="display: inline">+634 2344 24 43</h3>
+          <br /><br />
+          <h3>E-mail:</h3>
+          <i style="color: #009e66" class="fas fa-at"></i>
+          <h3 style="display: inline">myemail@gmail.com</h3>
+          <br /><br />
+          <h3>Adress:</h3>
+          <i style="color: #009e66" class="fas fa-map-marker-alt"></i>
+          <h3 style="display: inline">1000 Proctor St USA.</h3>
+          <br /><br />
+          <h3>Skype:</h3>
+          <i style="color: #009e66" class="fab fa-skype"></i>
+          <h3 style="display: inline">AlbertWalkers:live</h3>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
